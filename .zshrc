@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 . $HOME/.asdf/completions/asdf.bash
 
 
-source ~/.spaceshiprc.zsh
+source ~/.config/.spaceshiprc.zsh
 
 alias gs="git status"
 alias ga="git add ."
@@ -121,6 +121,7 @@ alias ...='cd ../..'
 alias -- -='cd -' 
 alias cat='bat'
 alias ls='eza -lah --git'
+alias fd='fzf'
 
 
 mkcd() { mkdir -p "$1" && cd "$1"; }
