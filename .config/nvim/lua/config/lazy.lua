@@ -40,7 +40,7 @@ require("lazy").setup({
         require("lspconfig").solargraph.setup({
           cmd = { "solargraph", "stdio" },
           filetypes = { "ruby" },
-          init_options = { formatting = true },
+          init_options = { formatting = false },
           settings = { solargraph = { diagnostics = true } },
         })
       end,

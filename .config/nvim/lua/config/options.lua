@@ -9,7 +9,7 @@ vim.opt.cmdheight = 2
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = false
-
+vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
 
 vim.opt.expandtab = true -- Convert Tabs to spaces
