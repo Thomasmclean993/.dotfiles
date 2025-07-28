@@ -67,7 +67,7 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   5
     outer.left =       5
     outer.bottom =     5
-    outer.top =        40
+    outer.top =        20
     outer.right =      5
 
 [workspace-to-monitor-force-assignment]
@@ -130,28 +130,28 @@ end tell'
 
 [mode.manage.binding]
 esc = ['reload-config', 'mode main']
-t = 'layout tiles horizontal vertical'
-a = 'layout accordion horizontal vertical'
+shift-t = 'layout tiles horizontal vertical'
+shift-a = 'layout accordion horizontal vertical'
 
 shift-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-1 = 'move-workspace-to-monitor 1'
-2 = 'move-workspace-to-monitor 2'
+alt-1 = 'move-workspace-to-monitor 1'
+alt-2 = 'move-workspace-to-monitor 2'
 f = ['layout floating tiling', 'mode main']
-alt-1 = 'move-node-to-workspace 1'
-alt-2 = 'move-node-to-workspace 2'
-alt-3 = 'move-node-to-workspace 3'
-alt-4 = 'move-node-to-workspace 4'
-alt-5 = 'move-node-to-workspace 5'
-alt-6 = 'move-node-to-workspace 6'
-alt-7 = 'move-node-to-workspace 7'
-alt-8 = 'move-node-to-workspace 8'
-alt-9 = 'move-node-to-workspace 9'
-alt-c = 'move-node-to-workspace C' # Command
-alt-b = 'move-node-to-workspace B' # Browser  
-alt-m = 'move-node-to-workspace M' # Music
-alt-n = 'move-node-to-workspace N' # Notes, Obsidian
-alt-t = 'move-node-to-workspace T' # Terminal
-alt-d = 'move-node-to-workspace D' # Discord, Messages, Whatapps
+1 = 'move-node-to-workspace 1'
+2 = 'move-node-to-workspace 2'
+3 = 'move-node-to-workspace 3'
+4 = 'move-node-to-workspace 4'
+5 = 'move-node-to-workspace 5'
+6 = 'move-node-to-workspace 6'
+7 = 'move-node-to-workspace 7'
+8 = 'move-node-to-workspace 8'
+9 = 'move-node-to-workspace 9'
+c = 'move-node-to-workspace C' # Command
+b = 'move-node-to-workspace B' # Browser  
+m = 'move-node-to-workspace M' # Music
+n = 'move-node-to-workspace N' # Notes, Obsidian
+t = 'move-node-to-workspace T' # Terminal
+d = 'move-node-to-workspace D' # Discord, Messages, Whatapps
 shift-f = ['fullscreen --no-outer-gaps', 'mode main']
 shift-h = ['join-with left']
 shift-j = ['join-with down']
@@ -182,3 +182,4 @@ e = 'balance-sizes'
 [[on-window-detected]]
     if.app-id = "com.github.th-ch.youtube-music"
     run = "move-node-to-workspace D"
+
