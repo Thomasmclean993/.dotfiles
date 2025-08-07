@@ -1,0 +1,74 @@
+[mode.main.binding]
+# Window management
+alt-q = 'close'                        # Close focused window
+alt-f = 'fullscreen'                   # Toggle fullscreen
+alt-w = 'layout floating tiling'       # Toggle floating (Hyprland: SUPER+W)
+alt-g = 'toggle group'                 # Toggle group (Hyprland: SUPER+G)
+alt-j = 'move down'                    # Move window down
+alt-k = 'move up'                      # Move window up
+alt-h = 'move left'                    # Move window left
+alt-l = 'move right'                   # Move window right
+alt-u = 'focus-monitor up'             # Focus monitor up
+alt-i = 'focus-monitor down'           # Focus monitor down
+
+# Focus (Hyprland: SUPER+arrow)
+alt-left  = 'focus left'
+alt-right = 'focus right'
+alt-up    = 'focus up'
+alt-down  = 'focus down'
+
+# Resize (Hyprland: SUPER+Shift+arrow)
+alt-shift-left  = 'resize smart -50'
+alt-shift-right = 'resize smart +50'
+alt-shift-up    = 'resize smart -50'
+alt-shift-down  = 'resize smart +50'
+
+# Application Shortcuts
+alt-t = 'exec-and-forget open -a Terminal'   # Terminal (Hyprland: SUPER+T)
+alt-b = 'exec-and-forget open -a Vivaldi'    # Browser (Hyprland: SUPER+B)
+alt-c = 'exec-and-forget open -a "Visual Studio Code"' # Editor (Hyprland: SUPER+C)
+alt-e = 'exec-and-forget open -a Finder'     # File Explorer (Hyprland: SUPER+E)
+alt-a = 'exec-and-forget open -a "Raycast"'   # App launcher (Hyprland: SUPER+A)
+
+# Workspaces (Hyprland: SUPER+number)
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+alt-0 = 'workspace 10'
+
+# Move window to workspace (Hyprland: SUPER+Shift+number)
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 10'
+
+# Special workspaces (Hyprland: SUPER+S, SUPER+Shift+S)
+alt-s = 'workspace special'
+alt-shift-s = 'move-node-to-workspace special'
+
+# Relative workspace navigation (Hyprland: SUPER+Ctrl+arrow)
+alt-ctrl-right = 'workspace r+1'
+alt-ctrl-left  = 'workspace r-1'
+alt-ctrl-down  = 'workspace empty'
+
+# Move workspace to monitor (Hyprland: SUPER+Ctrl+number)
+alt-ctrl-1 = 'move-workspace-to-monitor 1'
+alt-ctrl-2 = 'move-workspace-to-monitor 2'
+
+# Miscellaneous
+alt-v = 'exec-and-forget open -a "Clipy"'    # Clipboard manager (Hyprland: SUPER+V)
+alt-p = 'exec-and-forget open -a "Screenshot"' # Screenshot (Hyprland: SUPER+P)
+alt-shift-p = 'exec-and-forget open -a "Color Picker"' # Color picker (Hyprland: SUPER+Shift+P)
+alt-escape = ['reload-config', 'mode main']  # Reload config (Hyprland: SUPER+Escape)
