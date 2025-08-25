@@ -54,8 +54,10 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+require("ibl").setup()
+
 function open_float_term()
-  local buf = vim.api.nvim_create_buf(false, true) -- Create a new buffer
+  local buf = vim.api.nvim_create_buf(false, true) -- Create a new scatrch buffer
   local width = 80 -- set desired width
   local height = 20 -- set desired height
   local opts = {
