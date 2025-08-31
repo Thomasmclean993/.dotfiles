@@ -44,7 +44,6 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
@@ -74,17 +73,11 @@ automatically-unhide-macos-hidden-apps = false
     C = 'main'                           #Main Monitor 
     D = 'secondary'                       #Secondary
 
-# 'main' binding mode declaration
-# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
-# 'main' binding mode must be always presented
-# Fallback value (if you omit the key): mode.main.binding = {}
-
 [mode.main.binding]
-# Window management
+#Window Mangement
 alt-q = 'close'                        # Close focused window
 alt-f = 'fullscreen'                   # Toggle fullscreen
 alt-w = 'layout floating tiling'       # Toggle floating (Hyprland: SUPER+W)
-alt-g = 'toggle group'                 # Toggle group (Hyprland: SUPER+G)
 alt-j = 'move down'                    # Move window down
 alt-k = 'move up'                      # Move window up
 alt-h = 'move left'                    # Move window left
@@ -104,14 +97,7 @@ alt-shift-right = 'resize smart +50'
 alt-shift-up    = 'resize smart -50'
 alt-shift-down  = 'resize smart +50'
 
-# Application Shortcuts
-alt-t = 'exec-and-forget open -a Terminal'   # Terminal (Hyprland: SUPER+T)
-alt-b = 'exec-and-forget open -a Vivaldi'    # Browser (Hyprland: SUPER+B)
-alt-c = 'exec-and-forget open -a "Visual Studio Code"' # Editor (Hyprland: SUPER+C)
-alt-e = 'exec-and-forget open -a Finder'     # File Explorer (Hyprland: SUPER+E)
-alt-a = 'exec-and-forget open -a "Raycast"'   # App launcher (Hyprland: SUPER+A)
-
-# Workspaces (Hyprland: SUPER+number)
+ # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
@@ -121,35 +107,72 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
+alt-c = 'workspace C' # Command  
+alt-b = 'workspace B' # Browser  
+alt-m = 'workspace M' # Music
+alt-n = 'workspace N' # Notes, Obsidian
+alt-t = 'workspace T' # Terminal
+alt-d = 'workspace D' # Discord, Messages, Whatapps
 
-# Move window to workspace (Hyprland: SUPER+Shift+number)
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 10'
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+alt-shift-1  = 'move-node-to-workspace 1'
+alt-shift-2  = 'move-node-to-workspace 2'
+alt-shift-3  = 'move-node-to-workspace 3'
+alt-shift-4  = 'move-node-to-workspace 4'
+alt-shift-5  = 'move-node-to-workspace 5'
+alt-shift-6  = 'move-node-to-workspace 6'
+alt-shift-7  = 'move-node-to-workspace 7'
+alt-shift-8  = 'move-node-to-workspace 8'
+alt-shift-9  = 'move-node-to-workspace 9'
+alt-shift-c  = 'move-node-to-workspace C' # Command  
+alt-shift-b  = 'move-node-to-workspace B' # Browser  
+alt-shift-m  = 'move-node-to-workspace M' # Music
+alt-shift-n  = 'move-node-to-workspace N' # Notes, Obsidian
+alt-shift-t  = 'move-node-to-workspace T' # Terminal
+alt-shift-d  = 'move-node-to-workspace D' # Discord, Messages, WhatsApp
 
-# Special workspaces (Hyprland: SUPER+S, SUPER+Shift+S)
-alt-s = 'workspace special'
-alt-shift-s = 'move-node-to-workspace special'
+# Application Shortcuts
+alt-ctrl-t = 'exec-and-forget open -a Terminal'   # Terminal (Hyprland: SUPER+T)
+alt-ctrl-b = 'exec-and-forget open -a Vivaldi'    # Browser (Hyprland: SUPER+B)
+alt-a = 'exec-and-forget open -a "Raycast"'   # App launcher (Hyprland: SUPER+A)
+
+# Move workspace to monitor (Hyprland: SUPER+Ctrl+number)
+alt-ctrl-1 = 'move-workspace-to-monitor 1'
+alt-ctrl-2 = 'move-workspace-to-monitor 2'
 
 # Relative workspace navigation (Hyprland: SUPER+Ctrl+arrow)
 alt-ctrl-right = 'workspace r+1'
 alt-ctrl-left  = 'workspace r-1'
 alt-ctrl-down  = 'workspace empty'
 
-# Move workspace to monitor (Hyprland: SUPER+Ctrl+number)
-alt-ctrl-1 = 'move-workspace-to-monitor 1'
-alt-ctrl-2 = 'move-workspace-to-monitor 2'
-
 # Miscellaneous
 alt-v = 'exec-and-forget open -a "Clipy"'    # Clipboard manager (Hyprland: SUPER+V)
 alt-p = 'exec-and-forget open -a "Screenshot"' # Screenshot (Hyprland: SUPER+P)
 alt-shift-p = 'exec-and-forget open -a "Color Picker"' # Color picker (Hyprland: SUPER+Shift+P)
-alt-escape = ['reload-config', 'mode main']  # Reload config (Hyprland: SUPER+Escape)
+alt-esc = ['reload-config', 'mode main']  # Reload config (Hyprland: SUPER+Escape)
+
+[[on-window-detected]]
+    if.app-id = "com.vivaldi.Vivaldi"
+    run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+    if.app-id = "com.googlecode.iterm2"
+    run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+    if.app-id = "md.obsidian"
+    run = ["move-node-to-workspace C"]
+
+[[on-window-detected]]
+    if.app-id = "com.hnc.Discord"
+    run = ["layout tiling", "move-node-to-workspace D"]
+
+[[on-window-detected]]
+    if.app-id = "com.github.th-ch.youtube-music"
+    run = "move-node-to-workspace D"
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout floating",
+]
