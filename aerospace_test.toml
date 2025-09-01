@@ -132,7 +132,7 @@ alt-shift-t  = 'move-node-to-workspace T' # Terminal
 alt-shift-d  = 'move-node-to-workspace D' # Discord, Messages, WhatsApp
 
 # Application Shortcuts
-alt-ctrl-t = 'exec-and-forget open -a Terminal'   # Terminal (Hyprland: SUPER+T)
+alt-ctrl-t = 'exec-and-forget open -a Ghostty'   # Terminal (Hyprland: SUPER+T)
 alt-ctrl-b = 'exec-and-forget open -a Vivaldi'    # Browser (Hyprland: SUPER+B)
 alt-a = 'exec-and-forget open -a "Raycast"'   # App launcher (Hyprland: SUPER+A)
 
