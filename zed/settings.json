@@ -1,0 +1,59 @@
+{
+  "auto_indent_on_paste": true,
+  "vim_mode": true,
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "buffer_font_family": "Monaspace Neon",
+  "buffer_font_size": 16,
+  "buffer_font_weight": 500,
+  "ui_font_family": "Monaspace Neon",
+  "ui_font_size": 16,
+  "ui_font_weight": 500,
+  "show_whitespaces": "selection",
+  "show_completions_on_input": true,
+  "tab_size": 2,
+  "remove_trailing_whitespace_on_save": true,
+  "languages": {
+    "Elixir": {
+      "language_servers": ["elixir-ls", "tailwindcss-language-server"]
+    },
+    "HEEX": {
+      "language_servers": [
+        "elixir-ls",
+        "tailwindcss-language-server",
+        "emmet-language-server"
+      ]
+    }
+  },
+  "lsp": {
+    "elixir-ls": {
+      "settings": {
+        "dialyzerEnabled": true,
+        "incrementalDialyzer": true,
+        "fetchDeps": true,
+        "suggestSpecs": true,
+        "enableTestLenses": true
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "heex": "html",
+          "Elixir": "html"
+        }
+      }
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Dark",
+    "dark": "Ayu Dark"
+  },
+  "terminal": {
+    "font_family": "MesloLGS NF"
+  },
+  "file_finder": {
+    "modal_width": "high"
+  }
+}
