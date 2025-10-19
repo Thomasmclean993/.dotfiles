@@ -24,66 +24,8 @@ require("lazy").setup({
     { import = "plugins" },
     { import = "plugins.cmp" },
 
-    -- 👇 ADD THESE MASON PLUGINS
+   
     {
-      "williamboman/mason.nvim",
-      opts = {
-        ensure_installed = {
-          "gopls",
-          "elixir-ls",     -- ← Note: Mason uses "elixir-ls", not "elixirls"
-          "solargraph",
-          -- Add more as needed: "lua_ls", "rust_analyzer", "pyright", etc.
-        },
-        PATH = "skip", -- Don't modify PATH - let Mason handle binaries internally
-      },
-    },
-    {
-      "williamboman/mason-lspconfig.nvim",
-      dependencies = { "neovim/nvim-lspconfig" },
-      opts = {
-        -- Map Mason registry names to lspconfig setup names if different
-        -- e.g., Mason calls it "elixir-ls", but lspconfig expects "elixirls"
-        ensure_installed = { "gopls", "elixirls"},
-        handlers = {
-          -- You can define custom setup per server here, or let it auto-setup
-          gopls = function()
-            require("lspconfig").gopls.setup({
-              filetypes = { "go", "gomod", "gowork", "gotmpl" },
-              root_dir = require("lspconfig").util.root_pattern("go.work", "go.mod", ".git"),
-              settings = {
-                gopls = {
-                  analyses = {
-                    unusedparams = true,
-                  },
-                  staticcheck = true,
-                  completeUnimported = true,
-                  usePlaceholders = true,
-                },
-              },
-            })
-          end,
-
-          elixirls = function()
-            require("lspconfig").elixirls.setup({
-              cmd = { "elixir-ls" }, -- ← Mason installs binary as "elixir-ls"
-              filetypes = { "elixir", "eelixir" },
-              root_dir = require("lspconfig").util.root_pattern("mix.exs", ".git"),
-            })
-          end,
-
-          -- Fallback for other servers
-          function(server_name)
-            require("lspconfig")[server_name].setup({})
-          end,
-        },
-      },
-    },
-
-    -- 👇 KEEP nvim-lspconfig — now managed by Mason
-    {
-      "neovim/nvim-lspconfig",
-      -- No need for manual config anymore — handled by mason-lspconfig handlers above
-    },{
       "mfussenegger/nvim-dap",
       config = function()
         require("config.dap-config") -- runs after nvim-dap loads
