@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out,                            "WarningMsg" },
+      { out, "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -25,20 +25,8 @@ require("lazy").setup({
     { import = "plugins" },
     { import = "themes" },
     { import = "plugins.cmp" },
-
-    {
-      "mfussenegger/nvim-dap",
-      config = function()
-        require("config.dap-config") -- runs after nvim-dap loads
-      end,
-      dependencies = {
-        "rcarriga/nvim-dap-ui",
-        "jay-babu/mason-nvim-dap.nvim",
-      },
-    },
   },
-
-  install = { colorscheme = { "tokyodark" } },
+  install = { colorscheme = { "nightfox" } },
   checker = { enabled = true },
 })
 
@@ -64,4 +52,3 @@ vim.api.nvim_create_user_command("FloatTerm", open_float_term, {})
 
 require("config.keymaps")
 require("config.treesitter-config")
-require("config.dap-config")
