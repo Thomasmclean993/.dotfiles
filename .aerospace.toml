@@ -117,6 +117,9 @@ alt-ctrl-f = 'mode manage'
 #Browser
 ctrl-b = 'exec-and-forget open -a Youtube Music'
 
+#Terminal 
+ctrl-t = 'exec-and-forget open -a WezTerm'
+
 #Music 
 ctrl-m = '''exec-and-forget osascript -e ' 
 tell application \"Application/Youtube Music\" to activate'
@@ -168,8 +171,8 @@ e = 'balance-sizes'
     run = "move-node-to-workspace C"
 
 [[on-window-detected]]
-    if.app-id = "com.googlecode.iterm2"
-    run = "move-node-to-workspace C"
+    if.app-id = "com.github.wez.wezterm"
+    run = "move-node-to-workspace T"
 
 [[on-window-detected]]
     if.app-id = "md.obsidian"
