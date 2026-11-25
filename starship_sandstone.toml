@@ -1,0 +1,193 @@
+# Insert a bl
+add_newline = true
+
+# Increase the default command timeout to 2 seconds
+command_timeout = 2000
+
+palette = "sandstone"
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](band)\
+$os\
+$username\
+[](bg:teal fg:band)\
+$directory\
+[](bg:terra fg:teal)\
+$git_branch\
+$git_status\
+[](bg:carrot fg:terra)\
+$elixir\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](bg:sand fg:carrot)\
+$conda\
+$time\
+[ ](fg:sand)\
+$cmd_duration\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "bg:band fg:sand"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "👾"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+CachyOS = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:band fg:sand"
+style_root = "bg:band fg:terra"
+format = '[ $user]($style)'
+
+[directory]
+style = "bg:teal fg:dark"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:terra"
+format = '[[ $symbol $branch ](fg:dark bg:terra)]($style)'
+
+[git_status]
+style = "bg:terra"
+format = '[[($all_status$ahead_behind )](fg:dark bg:terra)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[elixir]
+symbol = "😈"
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[c]
+symbol = " "
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[php]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[java]
+symbol = " "
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version) ](fg:dark bg:carrot)]($style)'
+
+[python]
+symbol = ""
+style = "bg:carrot"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:dark bg:carrot)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:blue"
+format = '[[ $symbol( $context) ](fg:dark bg:blue)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:dark bg:sand"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:sand"
+format = '[[  $time ](fg:dark bg:sand)]($style)'
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:teal)'
+error_symbol = '[❯](bold fg:terra)'
+vimcmd_symbol = '[❮](bold fg:carrot)'
+vimcmd_replace_one_symbol = '[❮](bold fg:sand)'
+vimcmd_replace_symbol = '[❮](bold fg:sand)'
+vimcmd_visual_symbol = '[❮](bold fg:muted)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:band fg:sand"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+[palettes.sandstone]
+# ── The four given colors ───────────────────────────────────────
+dark = "#222A2A"      # Jet Black     - terminal bg, text on bright bands
+teal = "#4FBBBC"      # Tropical Teal - directory band
+terra = "#EC4624"     # Fiery Terracotta - git band / errors
+carrot = "#F39120"    # Carrot Orange - language bands
+sand = "#E2DAC2"      # Sand Dune     - conda/time band, prompt text
+
+# ── Derived from the four above ─────────────────────────────────
+band = "#2E3635"      # Jet Black lifted 7% toward Sand Dune (OS/user band)
+muted = "#6F7067"     # Jet Black lifted 40% toward Sand Dune (dim text)
+green = "#80AE8D"     # Teal warmed toward Carrot Orange
+blue = "#4F8CBC"      # Teal shifted toward blue
+red = "#EC4624"       # alias of terra
+yellow = "#F39120"    # alias of carrot
